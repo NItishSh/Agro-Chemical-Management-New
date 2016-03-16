@@ -1,0 +1,63 @@
+﻿@model IEnumerable<Agro_Chemical_Management.Models.Sale>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Index</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.CustomerName)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.CustomerAddress)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.SaleDate)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.TotalSaleValue)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.SaleType)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Operator)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.CustomerName)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.CustomerAddress)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.SaleDate)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.TotalSaleValue)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.SaleType)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Operator)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { id=item.SaleId }) |
+            @Html.ActionLink("Details", "Details", new { id=item.SaleId }) |
+            @Html.ActionLink("Delete", "Delete", new { id=item.SaleId })
+        </td>
+    </tr>
+}
+
+</table>

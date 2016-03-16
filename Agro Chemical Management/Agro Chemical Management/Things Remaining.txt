@@ -1,0 +1,7 @@
+﻿1. Create Partial view for SaleItems 
+2. Add this partial view to the appropriate views in Sales view
+3. while creating a new Sale with SaleItems save the Sale details fist get the ID substitute it to each SaleItems then save them too. 
+
+4. Create Partial view for PurchaseItems
+5. Add this partial view to the appropriate views in Purchase view
+6. while creating a new Purchase with PurchaseItems save the Purchase details fist get the ID substitute it to each PurchaseItems then save them too. 

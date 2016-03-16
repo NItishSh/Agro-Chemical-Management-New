@@ -1,0 +1,177 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="AgroChemicalDbModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <EntityType Name="Party">
+    <Key>
+      <PropertyRef Name="PartyCode" />
+    </Key>
+    <Property Name="PartyCode" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Name" Type="nvarchar" MaxLength="100" Nullable="false" />
+    <Property Name="Address" Type="nvarchar" MaxLength="200" Nullable="false" />
+    <Property Name="ContactNumber" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="TinNumber" Type="nvarchar" MaxLength="50" />
+    <Property Name="Description" Type="nvarchar" MaxLength="100" />
+  </EntityType>
+  <EntityType Name="Product">
+    <Key>
+      <PropertyRef Name="ProductCode" />
+    </Key>
+    <Property Name="ProductCode" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Name" Type="nvarchar" MaxLength="100" Nullable="false" />
+    <Property Name="TAX" Type="numeric" Precision="5" Scale="2" Nullable="false" />
+    <Property Name="PartyCode" Type="int" Nullable="false" />
+    <Property Name="QuantityType" Type="nvarchar" MaxLength="50" />
+    <Property Name="Description" Type="nvarchar" MaxLength="100" />
+  </EntityType>
+  <EntityType Name="Purchase">
+    <Key>
+      <PropertyRef Name="PurchaseId" />
+    </Key>
+    <Property Name="PurchaseId" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="InvoiceNumber" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="PurchaseDate" Type="datetime" Nullable="false" />
+    <Property Name="PartyCode" Type="int" Nullable="false" />
+    <Property Name="TotalPurchaseValue" Type="numeric" Precision="10" Scale="2" Nullable="false" />
+    <Property Name="BillType" Type="bit" Nullable="false" />
+    <Property Name="Opertator" Type="nvarchar" MaxLength="50" Nullable="false" />
+  </EntityType>
+  <EntityType Name="PurchaseItem">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="PurchaseID" Type="int" Nullable="false" />
+    <Property Name="ProductCode" Type="int" Nullable="false" />
+    <Property Name="Quantity" Type="int" Nullable="false" />
+    <Property Name="Price" Type="numeric" Precision="8" Scale="2" Nullable="false" />
+    <Property Name="TaxAmount" Type="numeric" Precision="8" Scale="2" Nullable="false" />
+    <Property Name="Total" Type="numeric" Precision="8" Scale="2" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Sale">
+    <Key>
+      <PropertyRef Name="SaleId" />
+    </Key>
+    <Property Name="SaleId" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="CustomerName" Type="nvarchar" MaxLength="100" Nullable="false" />
+    <Property Name="CustomerAddress" Type="nvarchar" MaxLength="200" Nullable="false" />
+    <Property Name="SaleDate" Type="datetime" Nullable="false" />
+    <Property Name="TotalSaleValue" Type="numeric" Precision="10" Scale="2" Nullable="false" />
+    <Property Name="SaleType" Type="bit" Nullable="false" />
+    <Property Name="Operator" Type="nvarchar" MaxLength="50" Nullable="false" />
+  </EntityType>
+  <EntityType Name="SaleItem">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="SaleId" Type="int" Nullable="false" />
+    <Property Name="ProductCode" Type="int" Nullable="false" />
+    <Property Name="Quantity" Type="int" Nullable="false" />
+    <Property Name="Price" Type="numeric" Precision="8" Scale="2" Nullable="false" />
+    <Property Name="TaxAmount" Type="numeric" Precision="8" Scale="2" Nullable="false" />
+    <Property Name="Total" Type="numeric" Precision="8" Scale="2" Nullable="false" />
+  </EntityType>
+  <Association Name="FK_Product_ToParty">
+    <End Role="Party" Type="Self.Party" Multiplicity="1" />
+    <End Role="Product" Type="Self.Product" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Party">
+        <PropertyRef Name="PartyCode" />
+      </Principal>
+      <Dependent Role="Product">
+        <PropertyRef Name="PartyCode" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Purchase_ToParty">
+    <End Role="Party" Type="Self.Party" Multiplicity="1" />
+    <End Role="Purchase" Type="Self.Purchase" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Party">
+        <PropertyRef Name="PartyCode" />
+      </Principal>
+      <Dependent Role="Purchase">
+        <PropertyRef Name="PartyCode" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_PurchaseItem_ToProduct">
+    <End Role="Product" Type="Self.Product" Multiplicity="1" />
+    <End Role="PurchaseItem" Type="Self.PurchaseItem" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Product">
+        <PropertyRef Name="ProductCode" />
+      </Principal>
+      <Dependent Role="PurchaseItem">
+        <PropertyRef Name="ProductCode" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_PurchaseItem_ToPurchase">
+    <End Role="Purchase" Type="Self.Purchase" Multiplicity="1" />
+    <End Role="PurchaseItem" Type="Self.PurchaseItem" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Purchase">
+        <PropertyRef Name="PurchaseId" />
+      </Principal>
+      <Dependent Role="PurchaseItem">
+        <PropertyRef Name="PurchaseID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_SaleItem_ToProduct">
+    <End Role="Product" Type="Self.Product" Multiplicity="1" />
+    <End Role="SaleItem" Type="Self.SaleItem" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Product">
+        <PropertyRef Name="ProductCode" />
+      </Principal>
+      <Dependent Role="SaleItem">
+        <PropertyRef Name="ProductCode" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_SaleItem_ToSale">
+    <End Role="Sale" Type="Self.Sale" Multiplicity="1" />
+    <End Role="SaleItem" Type="Self.SaleItem" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Sale">
+        <PropertyRef Name="SaleId" />
+      </Principal>
+      <Dependent Role="SaleItem">
+        <PropertyRef Name="SaleId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <EntityContainer Name="AgroChemicalDbModelStoreContainer">
+    <EntitySet Name="Party" EntityType="Self.Party" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Product" EntityType="Self.Product" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Purchase" EntityType="Self.Purchase" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="PurchaseItem" EntityType="Self.PurchaseItem" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Sale" EntityType="Self.Sale" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="SaleItem" EntityType="Self.SaleItem" Schema="dbo" store:Type="Tables" />
+    <AssociationSet Name="FK_Product_ToParty" Association="Self.FK_Product_ToParty">
+      <End Role="Party" EntitySet="Party" />
+      <End Role="Product" EntitySet="Product" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Purchase_ToParty" Association="Self.FK_Purchase_ToParty">
+      <End Role="Party" EntitySet="Party" />
+      <End Role="Purchase" EntitySet="Purchase" />
+    </AssociationSet>
+    <AssociationSet Name="FK_PurchaseItem_ToProduct" Association="Self.FK_PurchaseItem_ToProduct">
+      <End Role="Product" EntitySet="Product" />
+      <End Role="PurchaseItem" EntitySet="PurchaseItem" />
+    </AssociationSet>
+    <AssociationSet Name="FK_PurchaseItem_ToPurchase" Association="Self.FK_PurchaseItem_ToPurchase">
+      <End Role="Purchase" EntitySet="Purchase" />
+      <End Role="PurchaseItem" EntitySet="PurchaseItem" />
+    </AssociationSet>
+    <AssociationSet Name="FK_SaleItem_ToProduct" Association="Self.FK_SaleItem_ToProduct">
+      <End Role="Product" EntitySet="Product" />
+      <End Role="SaleItem" EntitySet="SaleItem" />
+    </AssociationSet>
+    <AssociationSet Name="FK_SaleItem_ToSale" Association="Self.FK_SaleItem_ToSale">
+      <End Role="Sale" EntitySet="Sale" />
+      <End Role="SaleItem" EntitySet="SaleItem" />
+    </AssociationSet>
+  </EntityContainer>
+</Schema>
