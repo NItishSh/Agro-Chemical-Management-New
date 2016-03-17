@@ -43,7 +43,8 @@ namespace Agro_Chemical_Management.Models
         [Required]
         [Display(Name = "Operator Name")]
         public string Operator { get; set; }
-    
+
+        [Display(Name = "Sale Items")]
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<SaleItem> SaleItems { get; set; }
     }
