@@ -4,4 +4,6 @@
 
 4. Create Partial view for PurchaseItems
 5. Add this partial view to the appropriate views in Purchase view
-6. while creating a new Purchase with PurchaseItems save the Purchase details fist get the ID substitute it to each PurchaseItems then save them too. 
+6. while creating a new Purchase with PurchaseItems save the Purchase details fist get the ID substitute it to each PurchaseItems then save them too.
+
+7. Set Defaults value for the sale date and purchase date as DateTime.Now on creation 
