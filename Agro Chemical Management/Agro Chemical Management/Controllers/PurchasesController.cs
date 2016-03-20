@@ -40,6 +40,9 @@ namespace Agro_Chemical_Management.Controllers
         public ActionResult Create()
         {
             ViewBag.PartyCode = new SelectList(db.Parties, "PartyCode", "Name");
+            ViewBag.ProductCode = new SelectList(db.Products, "ProductCode", "Name");
+            ViewBag.PurchaseID = new SelectList(db.Purchases, "PurchaseId", "InvoiceNumber");
+
             return View();
         }
 
