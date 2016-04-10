@@ -329,6 +329,7 @@
     <Content Include="Views\SaleItems\Edit.cshtml" />
     <Content Include="Views\SaleItems\Index.cshtml" />
     <Content Include="Views\Purchases\CreatePurchaseItem.cshtml" />
+    <Content Include="Views\Sales\CreateSaleItem.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

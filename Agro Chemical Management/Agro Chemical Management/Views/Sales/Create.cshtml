@@ -38,7 +38,12 @@
                 @Html.ValidationMessageFor(model => model.SaleDate, "", new { @class = "text-danger" })
             </div>
         </div>
-
+        <div class="form-group">
+            @Html.LabelFor(model => model.SaleItems, htmlAttributes: new { @class = "control-label col-md-2" })
+            <div id="SaleItemsPartial" class="col-md-10">
+                @Html.Partial("~/Views/Sales/CreateSaleItem.cshtml")
+            </div>
+        </div>
         <div class="form-group">
             @Html.LabelFor(model => model.TotalSaleValue, htmlAttributes: new { @class = "control-label col-md-2" })
             <div class="col-md-10">
@@ -79,4 +84,42 @@
 
 @section Scripts {
     @Scripts.Render("~/bundles/jqueryval")
+<script type="text/javascript">
+        $("#SaleItemsPartial table.table tr:last").find("#Quantity, #Price, #TaxAmount, #Total").val("0");
+        $('#Total, #TotalSaleValue').prop('readonly', true);
+        $(".AddPurchaseItem").click(function () {
+            var url = "@Url.Action("CreateSaleItem", "Sales")";
+            $.ajax({
+                url: url,
+                type: "POST",
+                data: $("#SaleItemsPartial").find("select, textarea, input").serialize(),
+                success: function (result) {
+                    //append the data to last but one row
+                    var product = $("#ProductCode option:selected").text();
+                    var quantity = $("#Quantity").val();
+                    var price = $("#Price").val();
+                    var taxAmount = $("#TaxAmount").val();
+                    var totalAmount = $("#Total").val();
+                    var newRow = $("<tr><td>" + product + "</td><td>" + quantity + "</td><td>" + price + "</td><td>" + taxAmount + "</td><td>" + totalAmount + "</td><td></td></tr>");
+                    $("#SaleItemsPartial table.table tr:last").before(newRow);
+                    $("#SaleItemsPartial table.table tr:last").find("#Quantity, #Price, #TaxAmount, #Total").val("0");
+                    var totalSaleValue = ($("#TotalSaleValue").val() * 1) + (totalAmount * 1);
+                    $("#TotalSaleValue").val(totalSaleValue);
+                }
+            });
+        });
+        $("#Quantity, #Price,  #TaxAmount").change(function () {
+            var totalAalue = calculateTotal();
+            if (totalAalue) {
+                $("#Total").val(totalAalue);
+            }
+        });
+        function calculateTotal() {
+            var quantity = $("#Quantity").val();
+            var price = $("#Price").val();
+            var taxamount = $("#TaxAmount").val();
+            return ((quantity * price) + (taxamount * 1));
+
+        }
+</script>
 }

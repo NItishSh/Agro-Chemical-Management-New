@@ -13,6 +13,7 @@ namespace Agro_Chemical_Management.Controllers
     public class SalesController : Controller
     {
         private AgroChemicalDbEntities db = new AgroChemicalDbEntities();
+        private const string SALE_ITEMS_SESSION_KEY = "SaleItems";
 
         // GET: Sales
         public ActionResult Index()
@@ -38,7 +39,28 @@ namespace Agro_Chemical_Management.Controllers
         // GET: Sales/Create
         public ActionResult Create()
         {
+            ViewBag.ProductCode = new SelectList(db.Products, "ProductCode", "Name");
+            ViewBag.SaleId = new SelectList(db.Sales, "SaleId", "CustomerName");
             return View();
+        }
+
+        [HttpPost]
+        public void CreateSaleItem(string Price, string ProductCode, string Quantity,string TaxAmount,string Total)
+        {
+            SaleItem item = new SaleItem() {
+                    Price=Convert.ToDecimal(Price),
+                    ProductCode=Convert.ToInt32(ProductCode),
+                    Quantity = Convert.ToInt32(Quantity),
+                    TaxAmount=Convert.ToDecimal(TaxAmount),
+                    Total=Convert.ToDecimal(Total)
+            };
+            var saleItems = TempData[SALE_ITEMS_SESSION_KEY] as List<SaleItem>;
+            if (saleItems == null)
+            {
+                saleItems = new List<SaleItem>();
+            }
+            saleItems.Add(item);
+            TempData[SALE_ITEMS_SESSION_KEY] = saleItems;
         }
 
         // POST: Sales/Create
@@ -52,6 +74,18 @@ namespace Agro_Chemical_Management.Controllers
             {
                 db.Sales.Add(sale);
                 db.SaveChanges();
+                var saleItems = TempData[SALE_ITEMS_SESSION_KEY] as List<SaleItem>;
+                if(saleItems != null)
+                {
+                    foreach(var item in saleItems)
+                    {
+                        item.SaleId = sale.SaleId;
+                        db.SaleItems.Add(item);
+                        db.SaveChanges();
+                    }
+                }
+                //clear the sale items in TempData as they are now moved to db
+                TempData[SALE_ITEMS_SESSION_KEY] = null;
                 return RedirectToAction("Index");
             }
 

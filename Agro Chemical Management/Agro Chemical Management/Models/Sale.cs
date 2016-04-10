@@ -31,6 +31,7 @@ namespace Agro_Chemical_Management.Models
 
         [Required]
         [Display(Name = "Sale Date")]
+        [DataType(DataType.Date, ErrorMessage = "Date not valid.")]
         public System.DateTime SaleDate { get; set; }
 
         [Required]
