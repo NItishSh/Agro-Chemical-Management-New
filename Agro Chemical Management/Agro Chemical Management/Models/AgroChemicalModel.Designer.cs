@@ -1,4 +1,4 @@
-﻿// T4 code generation is enabled for model 'D:\PGGM\My VS Code\Ticketing System\Agro Chemical Management\Agro Chemical Management\Models\AgroChemicalModel.edmx'. 
+﻿// T4 code generation is enabled for model 'C:\Users\Nitish\Source\Repos\Agro-Chemical-Management-New\Agro Chemical Management\Agro Chemical Management\Models\AgroChemicalModel.edmx'. 
 // To enable legacy code generation, change the value of the 'Code Generation Strategy' designer
 // property to 'Legacy ObjectContext'. This property is available in the Properties Window when the model
 // is open in the designer.

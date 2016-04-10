@@ -35,7 +35,7 @@
     <Property Name="InvoiceNumber" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
     <Property Name="PurchaseDate" Type="DateTime" Nullable="false" Precision="3" />
     <Property Name="PartyCode" Type="Int32" Nullable="false" />
-    <Property Name="TotalPurchaseValue" Type="Decimal" Precision="10" Scale="2" Nullable="false" />
+    <Property Name="TotalPurchaseValue" Type="Decimal" Precision="20" Scale="2" Nullable="false" />
     <Property Name="BillType" Type="Boolean" Nullable="false" />
     <Property Name="Opertator" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
     <NavigationProperty Name="Party" Relationship="Self.FK_Purchase_ToParty" FromRole="Purchase" ToRole="Party" />
@@ -49,9 +49,9 @@
     <Property Name="PurchaseID" Type="Int32" Nullable="false" />
     <Property Name="ProductCode" Type="Int32" Nullable="false" />
     <Property Name="Quantity" Type="Int32" Nullable="false" />
-    <Property Name="Price" Type="Decimal" Precision="8" Scale="2" Nullable="false" />
-    <Property Name="TaxAmount" Type="Decimal" Precision="8" Scale="2" Nullable="false" />
-    <Property Name="Total" Type="Decimal" Precision="8" Scale="2" Nullable="false" />
+    <Property Name="Price" Type="Decimal" Precision="20" Scale="2" Nullable="false" />
+    <Property Name="TaxAmount" Type="Decimal" Precision="20" Scale="2" Nullable="false" />
+    <Property Name="Total" Type="Decimal" Precision="20" Scale="2" Nullable="false" />
     <NavigationProperty Name="Product" Relationship="Self.FK_PurchaseItem_ToProduct" FromRole="PurchaseItem" ToRole="Product" />
     <NavigationProperty Name="Purchase" Relationship="Self.FK_PurchaseItem_ToPurchase" FromRole="PurchaseItem" ToRole="Purchase" />
   </EntityType>
@@ -63,7 +63,7 @@
     <Property Name="CustomerName" Type="String" MaxLength="100" FixedLength="false" Unicode="true" Nullable="false" />
     <Property Name="CustomerAddress" Type="String" MaxLength="200" FixedLength="false" Unicode="true" Nullable="false" />
     <Property Name="SaleDate" Type="DateTime" Nullable="false" Precision="3" />
-    <Property Name="TotalSaleValue" Type="Decimal" Precision="10" Scale="2" Nullable="false" />
+    <Property Name="TotalSaleValue" Type="Decimal" Precision="20" Scale="2" Nullable="false" />
     <Property Name="SaleType" Type="Boolean" Nullable="false" />
     <Property Name="Operator" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
     <NavigationProperty Name="SaleItems" Relationship="Self.FK_SaleItem_ToSale" FromRole="Sale" ToRole="SaleItem" />
@@ -76,9 +76,9 @@
     <Property Name="SaleId" Type="Int32" Nullable="false" />
     <Property Name="ProductCode" Type="Int32" Nullable="false" />
     <Property Name="Quantity" Type="Int32" Nullable="false" />
-    <Property Name="Price" Type="Decimal" Precision="8" Scale="2" Nullable="false" />
-    <Property Name="TaxAmount" Type="Decimal" Precision="8" Scale="2" Nullable="false" />
-    <Property Name="Total" Type="Decimal" Precision="8" Scale="2" Nullable="false" />
+    <Property Name="Price" Type="Decimal" Precision="20" Scale="2" Nullable="false" />
+    <Property Name="TaxAmount" Type="Decimal" Precision="20" Scale="2" Nullable="false" />
+    <Property Name="Total" Type="Decimal" Precision="20" Scale="2" Nullable="false" />
     <NavigationProperty Name="Product" Relationship="Self.FK_SaleItem_ToProduct" FromRole="SaleItem" ToRole="Product" />
     <NavigationProperty Name="Sale" Relationship="Self.FK_SaleItem_ToSale" FromRole="SaleItem" ToRole="Sale" />
   </EntityType>

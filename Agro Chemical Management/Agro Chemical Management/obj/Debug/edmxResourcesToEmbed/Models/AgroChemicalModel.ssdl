@@ -18,9 +18,9 @@
     <Property Name="ProductCode" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
     <Property Name="Name" Type="nvarchar" MaxLength="100" Nullable="false" />
     <Property Name="TAX" Type="numeric" Precision="5" Scale="2" Nullable="false" />
+    <Property Name="Description" Type="nvarchar" MaxLength="100" />
     <Property Name="PartyCode" Type="int" Nullable="false" />
     <Property Name="QuantityType" Type="nvarchar" MaxLength="50" />
-    <Property Name="Description" Type="nvarchar" MaxLength="100" />
   </EntityType>
   <EntityType Name="Purchase">
     <Key>
@@ -30,7 +30,7 @@
     <Property Name="InvoiceNumber" Type="nvarchar" MaxLength="50" Nullable="false" />
     <Property Name="PurchaseDate" Type="datetime" Nullable="false" />
     <Property Name="PartyCode" Type="int" Nullable="false" />
-    <Property Name="TotalPurchaseValue" Type="numeric" Precision="10" Scale="2" Nullable="false" />
+    <Property Name="TotalPurchaseValue" Type="numeric" Precision="20" Scale="2" Nullable="false" />
     <Property Name="BillType" Type="bit" Nullable="false" />
     <Property Name="Opertator" Type="nvarchar" MaxLength="50" Nullable="false" />
   </EntityType>
@@ -42,9 +42,9 @@
     <Property Name="PurchaseID" Type="int" Nullable="false" />
     <Property Name="ProductCode" Type="int" Nullable="false" />
     <Property Name="Quantity" Type="int" Nullable="false" />
-    <Property Name="Price" Type="numeric" Precision="8" Scale="2" Nullable="false" />
-    <Property Name="TaxAmount" Type="numeric" Precision="8" Scale="2" Nullable="false" />
-    <Property Name="Total" Type="numeric" Precision="8" Scale="2" Nullable="false" />
+    <Property Name="Price" Type="numeric" Precision="20" Scale="2" Nullable="false" />
+    <Property Name="TaxAmount" Type="numeric" Precision="20" Scale="2" Nullable="false" />
+    <Property Name="Total" Type="numeric" Precision="20" Scale="2" Nullable="false" />
   </EntityType>
   <EntityType Name="Sale">
     <Key>
@@ -54,7 +54,7 @@
     <Property Name="CustomerName" Type="nvarchar" MaxLength="100" Nullable="false" />
     <Property Name="CustomerAddress" Type="nvarchar" MaxLength="200" Nullable="false" />
     <Property Name="SaleDate" Type="datetime" Nullable="false" />
-    <Property Name="TotalSaleValue" Type="numeric" Precision="10" Scale="2" Nullable="false" />
+    <Property Name="TotalSaleValue" Type="numeric" Precision="20" Scale="2" Nullable="false" />
     <Property Name="SaleType" Type="bit" Nullable="false" />
     <Property Name="Operator" Type="nvarchar" MaxLength="50" Nullable="false" />
   </EntityType>
@@ -66,9 +66,9 @@
     <Property Name="SaleId" Type="int" Nullable="false" />
     <Property Name="ProductCode" Type="int" Nullable="false" />
     <Property Name="Quantity" Type="int" Nullable="false" />
-    <Property Name="Price" Type="numeric" Precision="8" Scale="2" Nullable="false" />
-    <Property Name="TaxAmount" Type="numeric" Precision="8" Scale="2" Nullable="false" />
-    <Property Name="Total" Type="numeric" Precision="8" Scale="2" Nullable="false" />
+    <Property Name="Price" Type="numeric" Precision="20" Scale="2" Nullable="false" />
+    <Property Name="TaxAmount" Type="numeric" Precision="20" Scale="2" Nullable="false" />
+    <Property Name="Total" Type="numeric" Precision="20" Scale="2" Nullable="false" />
   </EntityType>
   <Association Name="FK_Product_ToParty">
     <End Role="Party" Type="Self.Party" Multiplicity="1" />
