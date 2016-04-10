@@ -46,6 +46,32 @@ namespace Agro_Chemical_Management.Controllers
             return View();
         }
 
+        //[HttpGet]
+        //public ActionResult CreatePurchaseItem()
+        //{
+        //    ViewBag.ProductCode = new SelectList(db.Products, "ProductCode", "Name");
+        //    ViewBag.PurchaseID = new SelectList(db.Purchases, "PurchaseId", "InvoiceNumber");
+        //    return View();
+        //}
+
+        [HttpPost]
+        public void CreatePurchaseItem(string ProductCode, string Quantity, string Price, string TaxAmount, string Total)
+        {            
+            PurchaseItem purchaseItem = new PurchaseItem() {
+                ProductCode = Convert.ToInt32(ProductCode),
+                Price = Convert.ToDecimal(Price),
+                TaxAmount =Convert.ToDecimal(TaxAmount),
+                Quantity = Convert.ToInt32(Quantity),
+                Total=Convert.ToDecimal(Total)                
+            };
+            var purchaseItems = TempData["PurchaseItems"] as List<PurchaseItem>;
+            if(purchaseItems == null)
+            {
+                purchaseItems = new List<PurchaseItem>();                
+            }
+            purchaseItems.Add(purchaseItem);
+            TempData["PurchaseItems"] = purchaseItems;
+        }
         // POST: Purchases/Create
         // To protect from overposting attacks, please enable the specific properties you want to bind to, for 
         // more details see http://go.microsoft.com/fwlink/?LinkId=317598.
@@ -55,8 +81,15 @@ namespace Agro_Chemical_Management.Controllers
         {
             if (ModelState.IsValid)
             {
+                //TODO : possibly user transaction.
                 db.Purchases.Add(purchase);
                 db.SaveChanges();
+                var purchaseItems = TempData["PurchaseItems"] as List<PurchaseItem>;
+                if (purchaseItems != null)
+                {
+                    var purchaseId = purchase.PurchaseId;
+                    //TODO : substitute this to all purchaseItems before sending to db
+                }
                 return RedirectToAction("Index");
             }
 

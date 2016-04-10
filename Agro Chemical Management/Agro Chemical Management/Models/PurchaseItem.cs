@@ -17,7 +17,6 @@ namespace Agro_Chemical_Management.Models
         [Display(Name = "Purchase Item ID")]
         public int Id { get; set; }
 
-        [Required]
         [Display(Name = "Purchase Invoice")]
         public int PurchaseID { get; set; }
 

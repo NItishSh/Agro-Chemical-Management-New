@@ -7,10 +7,10 @@
 <h2>Create</h2>
 
 
-@using (Html.BeginForm()) 
+@using (Html.BeginForm())
 {
     @Html.AntiForgeryToken()
-    
+
     <div class="form-horizontal">
         <h4>Purchase</h4>
         <hr />
@@ -38,7 +38,12 @@
                 @Html.ValidationMessageFor(model => model.PartyCode, "", new { @class = "text-danger" })
             </div>
         </div>
-
+        <div class="form-group">
+            @Html.LabelFor(model => model.PurchaseItems, htmlAttributes: new { @class = "control-label col-md-2" })
+            <div id="PurchaseItemPartial" class="col-md-10">
+                @Html.Partial("~/Views/Purchases/CreatePurchaseItem.cshtml")
+            </div>
+        </div>
         <div class="form-group">
             @Html.LabelFor(model => model.TotalPurchaseValue, htmlAttributes: new { @class = "control-label col-md-2" })
             <div class="col-md-10">
@@ -79,4 +84,42 @@
 
 @section Scripts {
     @Scripts.Render("~/bundles/jqueryval")
+    <script type="text/javascript">
+        $("#PurchaseItemPartial table.table tr:last").find("#Quantity, #Price, #TaxAmount, #Total").val("0");
+        $('#Total, #TotalPurchaseValue').prop('readonly', true);
+        $(".AddPurchaseItem").click(function () {
+            var url = "@Url.Action("CreatePurchaseItem", "Purchases")";
+            $.ajax({
+                url: url,
+                type: "POST",
+                data: $("#PurchaseItemPartial").find("select, textarea, input").serialize(),
+                success: function (result) {
+                    //append the data to last but one row
+                    var product = $("#ProductCode option:selected").text();
+                    var quantity = $("#Quantity").val();
+                    var price = $("#Price").val();
+                    var taxAmount = $("#TaxAmount").val();
+                    var totalAmount = $("#Total").val();
+                    var newRow = $("<tr><td>" + product + "</td><td>" + quantity + "</td><td>" + price + "</td><td>" + taxAmount + "</td><td>" + totalAmount + "</td><td></td></tr>");
+                    $("#PurchaseItemPartial table.table tr:last").before(newRow);
+                    $("#PurchaseItemPartial table.table tr:last").find("#Quantity, #Price, #TaxAmount, #Total").val("0");
+                    var totalPurchaseValue = ($("#TotalPurchaseValue").val() * 1) + (totalAmount * 1);
+                    $("#TotalPurchaseValue").val(totalPurchaseValue);
+                }
+            });
+        });
+        $("#Quantity, #Price,  #TaxAmount").change(function () {
+            var totalAalue = calculateTotal();
+            if (totalAalue) {
+                $("#Total").val(totalAalue);
+            }
+        });
+        function calculateTotal() {
+            var quantity = $("#Quantity").val();
+            var price = $("#Price").val();
+            var taxamount = $("#TaxAmount").val();
+            return ((quantity * price) + (taxamount * 1));
+
+        }
+    </script>
 }

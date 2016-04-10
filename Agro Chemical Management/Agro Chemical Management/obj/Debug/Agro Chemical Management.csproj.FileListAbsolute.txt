@@ -67,3 +67,72 @@ D:\PGGM\My VS Code\Ticketing System\Agro Chemical Management\Agro Chemical Manag
 D:\PGGM\My VS Code\Ticketing System\Agro Chemical Management\Agro Chemical Management\obj\Debug\Agro Chemical Management.csprojResolveAssemblyReference.cache
 D:\PGGM\My VS Code\Ticketing System\Agro Chemical Management\Agro Chemical Management\obj\Debug\Agro Chemical Management.dll
 D:\PGGM\My VS Code\Ticketing System\Agro Chemical Management\Agro Chemical Management\obj\Debug\Agro Chemical Management.pdb
+C:\Users\Nitish\Source\Repos\Agro-Chemical-Management-New\Agro Chemical Management\Agro Chemical Management\bin\roslyn\csc.exe
+C:\Users\Nitish\Source\Repos\Agro-Chemical-Management-New\Agro Chemical Management\Agro Chemical Management\bin\roslyn\Microsoft.Build.Tasks.CodeAnalysis.dll
+C:\Users\Nitish\Source\Repos\Agro-Chemical-Management-New\Agro Chemical Management\Agro Chemical Management\bin\roslyn\Microsoft.CodeAnalysis.CSharp.dll
+C:\Users\Nitish\Source\Repos\Agro-Chemical-Management-New\Agro Chemical Management\Agro Chemical Management\bin\roslyn\Microsoft.CodeAnalysis.dll
+C:\Users\Nitish\Source\Repos\Agro-Chemical-Management-New\Agro Chemical Management\Agro Chemical Management\bin\roslyn\Microsoft.CodeAnalysis.VisualBasic.dll
+C:\Users\Nitish\Source\Repos\Agro-Chemical-Management-New\Agro Chemical Management\Agro Chemical Management\bin\roslyn\Microsoft.CSharp.Core.targets
+C:\Users\Nitish\Source\Repos\Agro-Chemical-Management-New\Agro Chemical Management\Agro Chemical Management\bin\roslyn\Microsoft.VisualBasic.Core.targets
+C:\Users\Nitish\Source\Repos\Agro-Chemical-Management-New\Agro Chemical Management\Agro Chemical Management\bin\roslyn\System.Collections.Immutable.dll
+C:\Users\Nitish\Source\Repos\Agro-Chemical-Management-New\Agro Chemical Management\Agro Chemical Management\bin\roslyn\System.Reflection.Metadata.dll
+C:\Users\Nitish\Source\Repos\Agro-Chemical-Management-New\Agro Chemical Management\Agro Chemical Management\bin\roslyn\vbc.exe
+C:\Users\Nitish\Source\Repos\Agro-Chemical-Management-New\Agro Chemical Management\Agro Chemical Management\bin\roslyn\VBCSCompiler.exe
+C:\Users\Nitish\Source\Repos\Agro-Chemical-Management-New\Agro Chemical Management\Agro Chemical Management\bin\roslyn\VBCSCompiler.exe.config
+C:\Users\Nitish\Source\Repos\Agro-Chemical-Management-New\Agro Chemical Management\Agro Chemical Management\bin\Agro Chemical Management.dll.config
+C:\Users\Nitish\Source\Repos\Agro-Chemical-Management-New\Agro Chemical Management\Agro Chemical Management\bin\Agro Chemical Management.dll
+C:\Users\Nitish\Source\Repos\Agro-Chemical-Management-New\Agro Chemical Management\Agro Chemical Management\bin\Agro Chemical Management.pdb
+C:\Users\Nitish\Source\Repos\Agro-Chemical-Management-New\Agro Chemical Management\Agro Chemical Management\bin\Antlr3.Runtime.dll
+C:\Users\Nitish\Source\Repos\Agro-Chemical-Management-New\Agro Chemical Management\Agro Chemical Management\bin\EntityFramework.dll
+C:\Users\Nitish\Source\Repos\Agro-Chemical-Management-New\Agro Chemical Management\Agro Chemical Management\bin\EntityFramework.SqlServer.dll
+C:\Users\Nitish\Source\Repos\Agro-Chemical-Management-New\Agro Chemical Management\Agro Chemical Management\bin\Microsoft.AspNet.Identity.Core.dll
+C:\Users\Nitish\Source\Repos\Agro-Chemical-Management-New\Agro Chemical Management\Agro Chemical Management\bin\Microsoft.AspNet.Identity.EntityFramework.dll
+C:\Users\Nitish\Source\Repos\Agro-Chemical-Management-New\Agro Chemical Management\Agro Chemical Management\bin\Microsoft.AspNet.Identity.Owin.dll
+C:\Users\Nitish\Source\Repos\Agro-Chemical-Management-New\Agro Chemical Management\Agro Chemical Management\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
+C:\Users\Nitish\Source\Repos\Agro-Chemical-Management-New\Agro Chemical Management\Agro Chemical Management\bin\Microsoft.Owin.dll
+C:\Users\Nitish\Source\Repos\Agro-Chemical-Management-New\Agro Chemical Management\Agro Chemical Management\bin\Microsoft.Owin.Host.SystemWeb.dll
+C:\Users\Nitish\Source\Repos\Agro-Chemical-Management-New\Agro Chemical Management\Agro Chemical Management\bin\Microsoft.Owin.Security.Cookies.dll
+C:\Users\Nitish\Source\Repos\Agro-Chemical-Management-New\Agro Chemical Management\Agro Chemical Management\bin\Microsoft.Owin.Security.dll
+C:\Users\Nitish\Source\Repos\Agro-Chemical-Management-New\Agro Chemical Management\Agro Chemical Management\bin\Microsoft.Owin.Security.Facebook.dll
+C:\Users\Nitish\Source\Repos\Agro-Chemical-Management-New\Agro Chemical Management\Agro Chemical Management\bin\Microsoft.Owin.Security.Google.dll
+C:\Users\Nitish\Source\Repos\Agro-Chemical-Management-New\Agro Chemical Management\Agro Chemical Management\bin\Microsoft.Owin.Security.MicrosoftAccount.dll
+C:\Users\Nitish\Source\Repos\Agro-Chemical-Management-New\Agro Chemical Management\Agro Chemical Management\bin\Microsoft.Owin.Security.OAuth.dll
+C:\Users\Nitish\Source\Repos\Agro-Chemical-Management-New\Agro Chemical Management\Agro Chemical Management\bin\Microsoft.Owin.Security.Twitter.dll
+C:\Users\Nitish\Source\Repos\Agro-Chemical-Management-New\Agro Chemical Management\Agro Chemical Management\bin\Microsoft.Web.Infrastructure.dll
+C:\Users\Nitish\Source\Repos\Agro-Chemical-Management-New\Agro Chemical Management\Agro Chemical Management\bin\Newtonsoft.Json.dll
+C:\Users\Nitish\Source\Repos\Agro-Chemical-Management-New\Agro Chemical Management\Agro Chemical Management\bin\Owin.dll
+C:\Users\Nitish\Source\Repos\Agro-Chemical-Management-New\Agro Chemical Management\Agro Chemical Management\bin\System.Web.Helpers.dll
+C:\Users\Nitish\Source\Repos\Agro-Chemical-Management-New\Agro Chemical Management\Agro Chemical Management\bin\System.Web.Mvc.dll
+C:\Users\Nitish\Source\Repos\Agro-Chemical-Management-New\Agro Chemical Management\Agro Chemical Management\bin\System.Web.Optimization.dll
+C:\Users\Nitish\Source\Repos\Agro-Chemical-Management-New\Agro Chemical Management\Agro Chemical Management\bin\System.Web.Razor.dll
+C:\Users\Nitish\Source\Repos\Agro-Chemical-Management-New\Agro Chemical Management\Agro Chemical Management\bin\System.Web.WebPages.Deployment.dll
+C:\Users\Nitish\Source\Repos\Agro-Chemical-Management-New\Agro Chemical Management\Agro Chemical Management\bin\System.Web.WebPages.dll
+C:\Users\Nitish\Source\Repos\Agro-Chemical-Management-New\Agro Chemical Management\Agro Chemical Management\bin\System.Web.WebPages.Razor.dll
+C:\Users\Nitish\Source\Repos\Agro-Chemical-Management-New\Agro Chemical Management\Agro Chemical Management\bin\WebGrease.dll
+C:\Users\Nitish\Source\Repos\Agro-Chemical-Management-New\Agro Chemical Management\Agro Chemical Management\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
+C:\Users\Nitish\Source\Repos\Agro-Chemical-Management-New\Agro Chemical Management\Agro Chemical Management\bin\System.Web.Helpers.xml
+C:\Users\Nitish\Source\Repos\Agro-Chemical-Management-New\Agro Chemical Management\Agro Chemical Management\bin\System.Web.Mvc.xml
+C:\Users\Nitish\Source\Repos\Agro-Chemical-Management-New\Agro Chemical Management\Agro Chemical Management\bin\System.Web.Optimization.xml
+C:\Users\Nitish\Source\Repos\Agro-Chemical-Management-New\Agro Chemical Management\Agro Chemical Management\bin\System.Web.Razor.xml
+C:\Users\Nitish\Source\Repos\Agro-Chemical-Management-New\Agro Chemical Management\Agro Chemical Management\bin\System.Web.WebPages.xml
+C:\Users\Nitish\Source\Repos\Agro-Chemical-Management-New\Agro Chemical Management\Agro Chemical Management\bin\System.Web.WebPages.Deployment.xml
+C:\Users\Nitish\Source\Repos\Agro-Chemical-Management-New\Agro Chemical Management\Agro Chemical Management\bin\System.Web.WebPages.Razor.xml
+C:\Users\Nitish\Source\Repos\Agro-Chemical-Management-New\Agro Chemical Management\Agro Chemical Management\bin\Antlr3.Runtime.pdb
+C:\Users\Nitish\Source\Repos\Agro-Chemical-Management-New\Agro Chemical Management\Agro Chemical Management\bin\Newtonsoft.Json.xml
+C:\Users\Nitish\Source\Repos\Agro-Chemical-Management-New\Agro Chemical Management\Agro Chemical Management\bin\EntityFramework.xml
+C:\Users\Nitish\Source\Repos\Agro-Chemical-Management-New\Agro Chemical Management\Agro Chemical Management\bin\EntityFramework.SqlServer.xml
+C:\Users\Nitish\Source\Repos\Agro-Chemical-Management-New\Agro Chemical Management\Agro Chemical Management\bin\Microsoft.AspNet.Identity.Core.xml
+C:\Users\Nitish\Source\Repos\Agro-Chemical-Management-New\Agro Chemical Management\Agro Chemical Management\bin\Microsoft.AspNet.Identity.Owin.xml
+C:\Users\Nitish\Source\Repos\Agro-Chemical-Management-New\Agro Chemical Management\Agro Chemical Management\bin\Microsoft.AspNet.Identity.EntityFramework.xml
+C:\Users\Nitish\Source\Repos\Agro-Chemical-Management-New\Agro Chemical Management\Agro Chemical Management\bin\Microsoft.Owin.xml
+C:\Users\Nitish\Source\Repos\Agro-Chemical-Management-New\Agro Chemical Management\Agro Chemical Management\bin\Microsoft.Owin.Host.SystemWeb.xml
+C:\Users\Nitish\Source\Repos\Agro-Chemical-Management-New\Agro Chemical Management\Agro Chemical Management\bin\Microsoft.Owin.Security.xml
+C:\Users\Nitish\Source\Repos\Agro-Chemical-Management-New\Agro Chemical Management\Agro Chemical Management\bin\Microsoft.Owin.Security.Facebook.xml
+C:\Users\Nitish\Source\Repos\Agro-Chemical-Management-New\Agro Chemical Management\Agro Chemical Management\bin\Microsoft.Owin.Security.Cookies.xml
+C:\Users\Nitish\Source\Repos\Agro-Chemical-Management-New\Agro Chemical Management\Agro Chemical Management\bin\Microsoft.Owin.Security.OAuth.xml
+C:\Users\Nitish\Source\Repos\Agro-Chemical-Management-New\Agro Chemical Management\Agro Chemical Management\bin\Microsoft.Owin.Security.Google.xml
+C:\Users\Nitish\Source\Repos\Agro-Chemical-Management-New\Agro Chemical Management\Agro Chemical Management\bin\Microsoft.Owin.Security.Twitter.xml
+C:\Users\Nitish\Source\Repos\Agro-Chemical-Management-New\Agro Chemical Management\Agro Chemical Management\bin\Microsoft.Owin.Security.MicrosoftAccount.xml
+C:\Users\Nitish\Source\Repos\Agro-Chemical-Management-New\Agro Chemical Management\Agro Chemical Management\obj\Debug\Agro Chemical Management.dll
+C:\Users\Nitish\Source\Repos\Agro-Chemical-Management-New\Agro Chemical Management\Agro Chemical Management\obj\Debug\Agro Chemical Management.pdb
+C:\Users\Nitish\Source\Repos\Agro-Chemical-Management-New\Agro Chemical Management\Agro Chemical Management\obj\Debug\Agro Chemical Management.csprojResolveAssemblyReference.cache
