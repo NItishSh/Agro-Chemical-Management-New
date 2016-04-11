@@ -28,6 +28,14 @@
         </dd>
 
         <dt>
+            @Html.DisplayNameFor(model => model.PurchaseItems)
+        </dt>
+
+        <dd>
+            @Html.Partial("~/Views/Purchases/PurchaseItemsDetails.cshtml", Model.PurchaseItems)
+        </dd>
+
+        <dt>
             @Html.DisplayNameFor(model => model.TotalPurchaseValue)
         </dt>
 
