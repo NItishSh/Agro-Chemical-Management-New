@@ -35,7 +35,7 @@ namespace Agro_Chemical_Management.Controllers
             }
             return View(purchase);
         }
-
+        
         // GET: Purchases/Create
         public ActionResult Create()
         {

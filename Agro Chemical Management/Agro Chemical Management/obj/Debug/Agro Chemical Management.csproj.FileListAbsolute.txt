@@ -135,3 +135,4 @@ C:\Users\Nitish\Source\Repos\Agro-Chemical-Management-New\Agro Chemical Manageme
 C:\Users\Nitish\Source\Repos\Agro-Chemical-Management-New\Agro Chemical Management\Agro Chemical Management\bin\Microsoft.Owin.Security.MicrosoftAccount.xml
 C:\Users\Nitish\Source\Repos\Agro-Chemical-Management-New\Agro Chemical Management\Agro Chemical Management\obj\Debug\Agro Chemical Management.dll
 C:\Users\Nitish\Source\Repos\Agro-Chemical-Management-New\Agro Chemical Management\Agro Chemical Management\obj\Debug\Agro Chemical Management.pdb
+C:\Users\Nitish\Source\Repos\Agro-Chemical-Management-New\Agro Chemical Management\Agro Chemical Management\obj\Debug\Agro Chemical Management.csprojResolveAssemblyReference.cache
