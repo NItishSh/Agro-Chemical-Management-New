@@ -109,6 +109,7 @@ namespace Agro_Chemical_Management.Controllers
             {
                 return HttpNotFound();
             }
+            ViewBag.ProductCode = new SelectList(db.Products, "ProductCode", "Name");
             ViewBag.PartyCode = new SelectList(db.Parties, "PartyCode", "Name", purchase.PartyCode);
             return View(purchase);
         }
