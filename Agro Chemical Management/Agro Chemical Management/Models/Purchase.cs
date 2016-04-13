@@ -29,6 +29,7 @@ namespace Agro_Chemical_Management.Models
         [Required]
         [Display(Name = "Purchase Date")]
         [DataType(DataType.Date, ErrorMessage = "Date not valid.")]
+        [DisplayFormat(DataFormatString = "{0:yyyy-MM-dd}", ApplyFormatInEditMode = true)]
         public System.DateTime PurchaseDate { get; set; }
 
         [Required]

@@ -1,9 +1,15 @@
-﻿1. Create Partial view for SaleItems 
+﻿/* Done
+1. Create Partial view for SaleItems 
 2. Add this partial view to the appropriate views in Sales view
 3. while creating a new Sale with SaleItems save the Sale details fist get the ID substitute it to each SaleItems then save them too. 
 
 4. Create Partial view for PurchaseItems
 5. Add this partial view to the appropriate views in Purchase view
 6. while creating a new Purchase with PurchaseItems save the Purchase details fist get the ID substitute it to each PurchaseItems then save them too.
-
+*/
+TODO:
 7. Set Defaults value for the sale date and purchase date as DateTime.Now on creation 
+8. in the edit form of purchase and sale, make total field of each item and grand total field be readonly and compute the value using javascript.
+9. once the page loads set the proper values in product dropdown. now it is always defaulting to first item in edit form
+10. change the type of submit button to button, on click push all the sale/purchase items for edit and then trigger form.submit
+	10.1. take care of forming the querystring properly for each sale/purchase item
